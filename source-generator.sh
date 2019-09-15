@@ -22,5 +22,5 @@ source "$(dirname "$0")"/kafka-common.sh
 # prepare Kafka
 echo "Generating sources..."
 
-create_kafka_topic 1 1 user_behavior
-java -cp target/FLINK_CASE-1.0-SNAPSHOT.jar sql_case.SourceGenerator 1000 | $KAFKA_DIR/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic user_behavior
+create_kafka_topic 1 1 user
+java -cp target/FLINK_CASE-1.0-SNAPSHOT.jar sql_case.SourceGenerator 1000 | $KAFKA_DIR/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic user
