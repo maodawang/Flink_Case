@@ -17,6 +17,6 @@
 # limitations under the License.
 ################################################################################
 
-source "$(dirname "$0")"/common.sh
+source "$(dirname "$0")"/env.sh
 
 $KAFKA_DIR/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic $1 --from-beginning
